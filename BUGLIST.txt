@@ -1,1 +1,0 @@
-Function scanf() in MenuAdmin() and MenuGuest() accepts wrong argument. Pri 0. *FIXED*

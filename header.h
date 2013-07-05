@@ -1,13 +1,11 @@
 struct GoodInfo
 {
 	int id;
-	char name;
+	char name[17];
 	float price;
 	int off;
 	float vip_price;
-};
-struct GoodInfo goods;
-/* TODO: Goods information needs array or something else. */
+}goods;
 
 void UserLogin();
 void AddInfo();
@@ -15,8 +13,8 @@ void EditInfo();
 void ViewInfo();
 void RemoveInfo();
 void Billboard();
-void FileOperation();
 void MenuGuest();
 void MenuAdmin();
 void About();
+void UserAuthMan();
 

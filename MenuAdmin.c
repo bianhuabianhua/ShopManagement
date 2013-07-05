@@ -15,35 +15,35 @@ void MenuAdmin()
     printf("3. Delete information\n");
     printf("4. Edit information\n");
     printf("5. Price billboard\n");
-    printf("6. Save into file\n");
     printf("\n");
-    printf("G: Login as guest\n");
-    printf("A: About this programme\n");
-    printf("X: Exit\n");
+    printf("G. Login as guest\n");
+    printf("A. About this programme\n");
+    printf("X. Exit\n");
     printf("********************\n");
     printf("Choice: ");
     
     fflush(stdin);
 	scanf("%c", &choice);
     
-    switch (choice)
-    {
-		case '1': AddInfo(); break;
-    	case '2': ViewInfo(); break;
-    	case '3': RemoveInfo(); break;
-    	case '4': EditInfo(); break;
-    	case '5': Billboard(); break;
-    	case '6': FileOperation(); break; 
-    	case 'g':
-    	case 'G': system("cls"); MenuGuest(); break;
-    	case 'a':
-    	case 'A': About(1); break;
-    	case 'x':
-    	case 'X':exit (0); break;
-    	default: printf("Invalid choice. Try again, please.\n");
-    	         printf("Choice: ");
-				 fflush(stdin);
-				 scanf("%c", &choice);
-				 break;
-    }
+    while (1)
+	{
+	    switch (choice)
+    	{
+			case '1': AddInfo(); break;
+	    	case '2': ViewInfo(1); break;
+	    	case '3': RemoveInfo(); break;
+	    	case '4': EditInfo(); break;
+	    	case '5': Billboard(); break;
+			case 'g':
+            case 'G': system("cls"); MenuGuest(); break;
+	    	case 'a':
+	    	case 'A': About(1); break;
+	    	case 'x':
+	    	case 'X':exit (0); break;
+	    	default: printf("Invalid choice. Try again, please.\n");
+	    	         printf("Choice: ");
+					 fflush(stdin);
+					 scanf("%c", &choice);
+    	}
+	}
 }

@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include "header.h"
 
-void FileOperation()
+void UserAuthMan()
 {
 	;
 }
-
