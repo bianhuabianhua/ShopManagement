@@ -27,7 +27,7 @@ void MenuGuest()
 		switch (choice)
 	    {
 	    	case '1': ViewInfo(0); break;
-	    	case '2': Billboard(); break;
+	    	case '2': Billboard(0); break;
 	    	case 'l':
 	    	case 'L': UserLogin(); break;
 	    	case 'a':

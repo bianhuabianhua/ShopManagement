@@ -17,4 +17,5 @@ void MenuGuest();
 void MenuAdmin();
 void About();
 void UserAuthMan();
+int GetLineCount();
 

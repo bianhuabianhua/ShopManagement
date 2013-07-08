@@ -17,7 +17,7 @@ void AddInfo()
 	{
 		/* Get informations */
 		printf("\n");
-		printf("ID: ");
+		printf("ID: (One number)\n");
 		scanf("%d", &goods.id);
 		printf("Name: (16 characters max)\n");
 		fflush(stdin);
@@ -50,6 +50,15 @@ void AddInfo()
 		fprintf(fp, "%.2f", goods.vip_price);
 		fputc('\n', fp);
 		
+		/* Delete useless returns. */
+		fseek(fp, -(long)sizeof('\n'), SEEK_END);
+		while (fgetc(fp) == '\n')
+		{
+			fseek(fp, -(long)sizeof('\n'), SEEK_CUR);
+			fputc('\0', fp);
+			fseek(fp, -(long)sizeof('\0'), SEEK_CUR);
+		}
+				
 		printf("Add another one? (y/n)\n");
 		fflush(stdin);
 		scanf("%c", &choice);

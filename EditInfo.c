@@ -7,7 +7,7 @@ void EditInfo()
 {
 	FILE *fp;
 	char IdToEdit;
-	int CurrentId;
+	char CurrentId;
 	int CurrentPos, diag;
 	char tmp;
 	char choice;
@@ -33,7 +33,7 @@ void EditInfo()
         CurrentId = fgetc(fp);
 	    if (CurrentId == IdToEdit)
 	    {
-	    	CurrentPos = (ftell(fp) + sizeof('\t'));
+	    	CurrentPos = ftell(fp);
 			break;
 	    }
 	    else
@@ -62,6 +62,7 @@ void EditInfo()
 	fseek(fp, (long)CurrentPos, 0);
 	
 	/* Write to file */
+	fputc('\t', fp);
 	fprintf(fp, "%s", goods.name);
 	if (strlen(goods.name) < 8)
 	{

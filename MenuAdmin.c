@@ -33,7 +33,7 @@ void MenuAdmin()
 	    	case '2': ViewInfo(1); break;
 	    	case '3': RemoveInfo(); break;
 	    	case '4': EditInfo(); break;
-	    	case '5': Billboard(); break;
+	    	case '5': Billboard(1); break;
 			case 'g':
             case 'G': system("cls"); MenuGuest(); break;
 	    	case 'a':
